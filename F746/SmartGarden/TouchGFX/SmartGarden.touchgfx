@@ -1,0 +1,244 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Screen1",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "backgroundImage",
+            "Width": 480,
+            "Height": 272,
+            "RelativeFilename": "image_bg.png"
+          },
+          {
+            "Type": "Gauge",
+            "Name": "gaugeTemp",
+            "X": 26,
+            "Y": 6,
+            "Width": 120,
+            "Height": 120,
+            "Preset": "alternate_theme\\presets\\gauges\\tiny\\dark.json",
+            "FileNameBackground": "__generated\\alternate_theme_images_widgets_gauge_tiny_backgrounds_dark.png",
+            "RotationCenterX": 60.0,
+            "RotationCenterY": 60.0,
+            "StartAngle": -90.0,
+            "EndAngle": 90.0,
+            "RangeMax": 40.0,
+            "InitialValue": 20.0,
+            "Easing": "Linear",
+            "EasingOption": "In",
+            "FileNameNeedle": "__generated\\alternate_theme_images_widgets_gauge_tiny_needles_rough.png",
+            "NeedleRotationCenterX": 5.0,
+            "NeedleRotationCenterY": 33.0,
+            "NeedleMovingRenderingAlgorithm": "Bilinear Interpolation",
+            "NeedleSteadyRenderingAlgorithm": "Bilinear Interpolation",
+            "ArcColor": {
+              "Red": 20,
+              "Green": 151,
+              "Blue": 197
+            },
+            "ArcCapStyle": "Butt"
+          },
+          {
+            "Type": "Gauge",
+            "Name": "gaugeHum",
+            "X": 26,
+            "Y": 126,
+            "Width": 120,
+            "Height": 120,
+            "Preset": "alternate_theme\\presets\\gauges\\tiny\\light_filled.json",
+            "FileNameBackground": "__generated\\alternate_theme_images_widgets_gauge_tiny_backgrounds_light_filled.png",
+            "RotationCenterX": 60.0,
+            "RotationCenterY": 60.0,
+            "StartAngle": -119.0,
+            "EndAngle": 122.0,
+            "RangeMax": 100.0,
+            "InitialValue": 50.0,
+            "Easing": "Linear",
+            "EasingOption": "In",
+            "FileNameNeedle": "__generated\\alternate_theme_images_widgets_gauge_tiny_needles_rough.png",
+            "NeedleRotationCenterX": 5.0,
+            "NeedleRotationCenterY": 33.0,
+            "NeedleMovingRenderingAlgorithm": "Bilinear Interpolation",
+            "NeedleSteadyRenderingAlgorithm": "Bilinear Interpolation",
+            "UseArc": true,
+            "FileNameArc": "__generated\\alternate_theme_images_widgets_gauge_tiny_fillers_swoop.png",
+            "ArcColor": {
+              "Red": 20,
+              "Green": 151,
+              "Blue": 197
+            },
+            "SetArcPosition": true,
+            "ArcX": 12.0,
+            "ArcY": 12.0,
+            "ArcWidth": 95.0,
+            "ArcHeight": 71.0,
+            "ArcRadius": 50.0,
+            "ArcLineWidth": 49.0,
+            "ArcCapStyle": "Butt"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textLux",
+            "X": 169,
+            "Y": 114,
+            "Width": 147,
+            "Height": 24,
+            "TextId": "__SingleUse_W2X8",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 15
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textSolEtat",
+            "X": 349,
+            "Y": 54,
+            "Width": 105,
+            "Height": 24,
+            "TextId": "__SingleUse_HTL1",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 20
+            },
+            "WideTextAction": 6
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 222,
+            "Y": 145,
+            "Width": 36,
+            "Height": 24,
+            "TextId": "__SingleUse_V7KD",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2",
+            "X": 48,
+            "Y": 62,
+            "Width": 7,
+            "Height": 12,
+            "TextId": "__SingleUse_8634",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2_1",
+            "X": 116,
+            "Y": 62,
+            "Width": 11,
+            "Height": 12,
+            "TextId": "__SingleUse_0AF3",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2_1_1",
+            "X": 75,
+            "Y": 26,
+            "Width": 23,
+            "Height": 16,
+            "TextId": "__SingleUse_N4Q3",
+            "TextRotation": "0"
+          },
+          {
+            "Type": "Button",
+            "Name": "buttonFan",
+            "X": 346,
+            "Y": 177,
+            "Width": 110,
+            "Height": 50,
+            "Pressed": "pressed_fan.png",
+            "Released": "released_fan.png"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonFan"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onFanButtonClicked"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "SmartGarden",
+    "Resolution": {
+      "Width": 480,
+      "Height": 272
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 480,
+        "Height": 272
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommand": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommand": "make -f ../gcc/Makefile flash -j8",
+    "FlashTargetIntCommandOverride": "make -f ../gcc/Makefile intflash -j8",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32F7",
+    "SubFamily": "STM32F7x6",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m7",
+    "ProjectFile": "../STM32F746G_DISCO.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "CWRVector",
+      "VectorFonts",
+      "Video"
+    ]
+  },
+  "Version": "4.26.0",
+  "CreatedBy": "4.26.0"
+}
