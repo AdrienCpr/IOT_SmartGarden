@@ -82,16 +82,15 @@
           {
             "Type": "TextArea",
             "Name": "textLux",
-            "X": 169,
+            "X": 156,
             "Y": 114,
-            "Width": 147,
-            "Height": 24,
+            "Width": 168,
+            "Height": 22,
             "TextId": "__SingleUse_W2X8",
             "TextRotation": "0",
-            "AutoSize": true,
             "Wildcard1": {
               "UseBuffer": true,
-              "BufferSize": 15
+              "BufferSize": 20
             }
           },
           {
@@ -99,8 +98,8 @@
             "Name": "textSolEtat",
             "X": 349,
             "Y": 54,
-            "Width": 105,
-            "Height": 24,
+            "Width": 96,
+            "Height": 22,
             "TextId": "__SingleUse_HTL1",
             "TextRotation": "0",
             "AutoSize": true,
@@ -115,8 +114,8 @@
             "Name": "textArea1",
             "X": 222,
             "Y": 145,
-            "Width": 36,
-            "Height": 24,
+            "Width": 32,
+            "Height": 22,
             "TextId": "__SingleUse_V7KD",
             "TextRotation": "0",
             "AutoSize": true
@@ -126,7 +125,7 @@
             "Name": "textArea2",
             "X": 48,
             "Y": 62,
-            "Width": 7,
+            "Width": 4,
             "Height": 12,
             "TextId": "__SingleUse_8634",
             "TextRotation": "0",
@@ -137,7 +136,7 @@
             "Name": "textArea2_1",
             "X": 116,
             "Y": 62,
-            "Width": 11,
+            "Width": 8,
             "Height": 12,
             "TextId": "__SingleUse_0AF3",
             "TextRotation": "0",

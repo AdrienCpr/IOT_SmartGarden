@@ -36,7 +36,7 @@ void Screen1View::updateValues(float t, float h, int l, bool s, bool f)
     gaugeHum.invalidate();
 
     // Lumière
-    Unicode::snprintf(textLuxBuffer, TEXTLUX_SIZE, "%d Lux", l);
+    Unicode::snprintf(textLuxBuffer, TEXTLUX_SIZE, "%d", l);
     textLux.invalidate();
 
     // Humidité Sol

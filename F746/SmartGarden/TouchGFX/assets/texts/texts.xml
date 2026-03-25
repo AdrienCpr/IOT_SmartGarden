@@ -21,13 +21,13 @@
       <Text Id="__SingleUse_HTL1" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">Humidité :&lt;v&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_W2X8" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">Lumière : &lt;d&gt; Lux</Translation>
+      <Text Id="__SingleUse_W2X8" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Lumière : &lt;d&gt;</Translation>
       </Text>
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0-9,SEC,HUMIDE,TEST,H,U,M,I,D,E,S,E,C" WildcardCharacterRanges="0x20-0x7E" />
+    <Typography Id="Default" Font="verdana.ttf" Size="18" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0-9,SEC,HUMIDE,TEST,H,U,M,I,D,E,S,E,C" WildcardCharacterRanges="0x20-0x7E" />
     <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography1" Font="verdana.ttf" Size="6" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />

@@ -53,10 +53,10 @@ while True:
         print("TX:", payload)
        
         if uart.any():
-            data = uart.read().decode('utf-8').strip() # On lit tout d'un coup
-            print("Données brutes reçues :", data) # <--- AJOUTE CETTE LIGNE
+            data = uart.read().decode('utf-8').strip()
+            print("Données brutes reçues :", data)
             
-            if "FAN_ON" in data: # Utilise "in" au lieu de "==" c'est plus robuste
+            if "FAN_ON" in data:
                 update_fan(True)
             elif "FAN_OFF" in data:
                 update_fan(False)
