@@ -50,7 +50,7 @@ void Screen1View::updateValues(float t, float h, int l, bool s, bool f)
 
 void Screen1View::onFanButtonClicked()
 {
-    fanOn = !fanOn;   // toggle
+    fanOn = !fanOn;
 
     if (fanOn)
         UART6_SendCommand("FAN_ON");

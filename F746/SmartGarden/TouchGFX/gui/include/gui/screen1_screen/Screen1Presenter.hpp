@@ -18,7 +18,6 @@ public:
 
     virtual ~Screen1Presenter() {}
 
-    // AJOUTE CETTE LIGNE ICI :
     virtual void setNewData(float t, float h, int l, bool s, bool f);
 
 private:

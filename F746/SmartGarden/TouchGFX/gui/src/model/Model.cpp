@@ -2,8 +2,8 @@
 #include <gui/model/ModelListener.hpp>
 
 #include <stdio.h>
-#include <stdint.h>   // ← pour uint8_t
-#include <string.h>   // ← pour memcpy
+#include <stdint.h>
+#include <string.h>
 
 extern "C" {
     extern char     msg_ready_buffer[50];
@@ -14,7 +14,7 @@ Model::Model() : modelListener(0), temperature(0), humidity(0), light(0), soilWe
 {
 }
 
-#include <cstdlib> // Pour atof et atoi
+#include <cstdlib>
 
 void Model::tick()
 {
@@ -22,12 +22,10 @@ void Model::tick()
 	{
 	    msg_ready_flag = 0;
 
-	    // On nettoie le début du buffer au cas où il y aurait un '#' ou un espace
 	    char* cleanStart = strpbrk(msg_ready_buffer, "0123456789-");
 
 	    if (cleanStart != NULL)
 	    {
-	        // On travaille sur le pointeur "propre"
 	        char* token = strtok(cleanStart, ",");
 	        if (token != NULL) {
 	            temperature = (float)atof(token);

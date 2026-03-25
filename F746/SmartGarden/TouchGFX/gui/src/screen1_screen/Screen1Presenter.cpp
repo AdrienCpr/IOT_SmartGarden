@@ -19,5 +19,5 @@ void Screen1Presenter::deactivate()
 
 void Screen1Presenter::setNewData(float t, float h, int l, bool s, bool f)
 {
-    view.updateValues(t, h, l, s, f); // Transmet à la vue
+    view.updateValues(t, h, l, s, f);
 }

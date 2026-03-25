@@ -151,11 +151,11 @@ const osThreadAttr_t videoTask_attributes = {
 /* USER CODE BEGIN PV */
 
 uint8_t uart_rx_buffer[1];
-char msg_buffer[50];      // buffer en cours de construction
-char msg_ready_buffer[50]; // buffer complet prêt à être lu
+char msg_buffer[50];
+char msg_ready_buffer[50];
 int  msg_index = 0;
 uint32_t uart_counter = 0;
-volatile uint8_t msg_ready_flag = 0; // 1 = nouvelle trame disponible
+volatile uint8_t msg_ready_flag = 0;
 
 /* USER CODE END PV */
 
@@ -727,7 +727,7 @@ static void MX_FMC_Init(void)
   HAL_SDRAM_SendCommand(&hsdram1, &Command, SDRAM_TIMEOUT);
 
   // Étape 4 : Load Mode Register
-  #define SDRAM_MODEREG_VALUE ((uint32_t)0x0230) // CAS=3, BL=1, séquentiel
+  #define SDRAM_MODEREG_VALUE ((uint32_t)0x0230)
   Command.CommandMode            = FMC_SDRAM_CMD_LOAD_MODE;
   Command.AutoRefreshNumber      = 1;
   Command.ModeRegisterDefinition = SDRAM_MODEREG_VALUE;
@@ -820,7 +820,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
     if (huart->Instance == USART6)
     {
         char c = (char)uart_rx_buffer[0];
-        if (c == '\n' || c == '\r' || c == '!') // On s'arrête au retour à la ligne ou au !
+        if (c == '\n' || c == '\r' || c == '!')
         {
             msg_buffer[msg_index] = '\0';
             memcpy(msg_ready_buffer, msg_buffer, 50);
@@ -835,12 +835,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
     }
 }
 
-
-
-// AJOUTE CETTE FONCTION JUSTE EN DESSOUS
-
-// Elle gère les erreurs de collision de données (Overrun)
-
 void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 
 {
@@ -849,17 +843,12 @@ if (huart->Instance == USART6)
 
 {
 
-// On efface les drapeaux d'erreur
-
 __HAL_UART_CLEAR_OREFLAG(huart);
 
 __HAL_UART_CLEAR_NEFLAG(huart);
 
 __HAL_UART_CLEAR_FEFLAG(huart);
 
-
-
-// ON RELANCE L'ÉCOUTE (Indispensable pour débloquer le compteur)
 
 HAL_UART_Receive_IT(huart, uart_rx_buffer, 1);
 
